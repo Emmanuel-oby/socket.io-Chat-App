@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 :root {
 	--dark-color-a: #667aff;
@@ -15,7 +15,7 @@
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 16px;
 	background: var(--light-color);
 	margin: 20px;
@@ -36,6 +36,7 @@ a {
 	color: var(--dark-color-a);
 	border: 0;
 	font-size: 17px;
+	border-radius: 5px;
 }
 
 /* Chat Page */
@@ -85,20 +86,27 @@ a {
 	padding: 10px 0;
 }
 
-.chat-messages {
-	padding: 30px;
-	max-height: 500px;
+.chats {
 	overflow-y: scroll;
 }
+.chat-messages {
+	padding: 10px 200px 0px 30px;
+	max-height: 500px;
+}
 
-.chat-messages .message {
+.chat-messages-me {
+	padding: 10px 30px 0px 200px;
+	max-height: 500px;
+}
+
+.chat-messages .message, .chat-messages-me .message {
 	padding: 10px;
 	margin-bottom: 15px;
 	background-color: var(--light-color);
 	border-radius: 5px;
 }
 
-.chat-messages .message .meta {
+.chat-messages .message .meta, .chat-messages-me .message .meta {
 	font-size: 15px;
 	font-weight: bold;
 	color: var(--dark-color-b);
@@ -106,7 +114,7 @@ a {
 	margin-bottom: 7px;
 }
 
-.chat-messages .message .meta span {
+.chat-messages .message .meta span, .chat-messages-me .message .meta span {
 	color: #777;
 }
 
@@ -119,11 +127,15 @@ a {
 	display: flex;
 }
 
-.chat-form-container input[type='text'] {
+.chat-form-container input[type="text"] {
 	font-size: 16px;
 	padding: 5px;
 	height: 40px;
 	flex: 1;
+}
+
+.text-box {
+	border-radius: 5px;
 }
 
 /* Join Page */
@@ -159,7 +171,7 @@ a {
 	margin-bottom: 5px;
 }
 
-.join-main input[type='text'] {
+.join-main input[type="text"] {
 	font-size: 16px;
 	padding: 5px;
 	height: 40px;
